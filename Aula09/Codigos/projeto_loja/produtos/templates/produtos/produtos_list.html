@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Lista de Produtos{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Lista de Produtos</h1>
+<div class="row">
+    {% for produto in produtos %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ produto.nome }}</h5>
+                <p class="card-text">Preço: R$ {{ produto.preco }}</p>
+                <a href="{% url 'produto_detail' produto.id %}" class="btn btn-primary">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p class="text-muted">Nenhum produto cadastrado.</p>
+    {% endfor %}
+</div>
+{% endblock %}

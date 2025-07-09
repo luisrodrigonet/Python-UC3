@@ -1,0 +1,17 @@
+/**
+ Arquivo com CSS do projeto
+**/
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+}
+
+.nav-link:hover {
+    color: #f8d7da !important; /* Cor ao passar o mouse */
+}
